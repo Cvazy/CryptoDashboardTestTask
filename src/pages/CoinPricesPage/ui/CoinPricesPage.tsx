@@ -1,5 +1,5 @@
 const CoinPricesPage = () => {
-  return <div className={"w-full h-full"}></div>;
+  return <div className={"text-white w-full h-full"}>Coin Prices</div>;
 };
 
 export default CoinPricesPage;

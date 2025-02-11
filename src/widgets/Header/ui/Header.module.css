@@ -1,0 +1,12 @@
+.Header {
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        box-shadow: 0 0 100px 80px #02314f;
+    }
+}

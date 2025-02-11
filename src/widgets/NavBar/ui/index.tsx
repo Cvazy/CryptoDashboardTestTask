@@ -1,3 +1,3 @@
 export const NavBar = () => {
-  return <div className={"bg-black w-full h-24"}></div>;
+  return <div className={"bg-[#19273d] w-full h-24"}></div>;
 };
