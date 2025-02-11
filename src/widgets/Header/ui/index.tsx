@@ -1,18 +1,22 @@
 import MenuIcon from "shared/assets/images/icons/menu.svg";
 import RefreshIcon from "shared/assets/images/icons/refresh.svg";
 import styles from "./Header.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RouteConfig } from "shared/config";
+import { useLocation } from "react-router-dom";
 
 export const Header = () => {
-  const pathname = window.location.pathname;
+  const { pathname } = useLocation();
+  const [title, setTitle] = useState<string>("");
   const [isRotate, setIsRotate] = useState<boolean>(false);
 
-  const pathData = Object.values(RouteConfig).find(
-    ({ path }) => path?.toLowerCase() === pathname.toLowerCase(),
-  );
+  useEffect(() => {
+    const pathData = Object.values(RouteConfig).find(
+      ({ path }) => path?.toLowerCase() === pathname.toLowerCase(),
+    );
 
-  const title = pathData?.title || "Not Found";
+    setTitle(pathData?.title || "Not Found");
+  }, [pathname]);
 
   return (
     <header className={"w-full"}>
