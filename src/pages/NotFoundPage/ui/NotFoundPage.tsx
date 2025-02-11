@@ -6,7 +6,7 @@ const NotFoundPage = () => {
       <div className={"flex flex-col items-center gap-4"}>
         <p
           className={
-            "text-9xl font-semibold text-center text-[#4A6078] sm:text-[140px] md:text-[180px] lg:text-[220px] xl:text-[256px]"
+            "text-9xl font-semibold text-center text-[#4A6077] sm:text-[140px] md:text-[180px] lg:text-[220px] xl:text-[256px]"
           }
         >
           404
@@ -14,7 +14,7 @@ const NotFoundPage = () => {
 
         <p
           className={
-            "text-base font-normal text-center text-[#4A6078] md:text-lg xl:text-xl"
+            "text-base font-normal text-center text-[#4A6077] md:text-lg xl:text-xl"
           }
         >
           The page was not found
@@ -24,7 +24,7 @@ const NotFoundPage = () => {
           <button
             type={"button"}
             className={
-              "text-white text-lg text-bold text-center px-4 py-3 w-full"
+              "text-white rounded-lg border border-[#4A6077] border-solid text-lg text-bold text-center px-4 py-3 w-full"
             }
           >
             To the main page
