@@ -1,5 +1,5 @@
 const ProfilePage = () => {
-  return <div className={"text-white w-full h-full"}>Profile Page</div>;
+  return <div className={"w-full h-full"}></div>;
 };
 
 export default ProfilePage;

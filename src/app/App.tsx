@@ -8,7 +8,7 @@ function App() {
       <Header />
 
       <main className={"flex flex-grow w-full"}>
-        <div className={"p-5 w-full h-full"}>
+        <div className={"py-5 w-full h-full"}>
           <AppRouter />
         </div>
       </main>

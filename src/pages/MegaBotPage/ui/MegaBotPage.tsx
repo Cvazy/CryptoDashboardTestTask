@@ -1,5 +1,5 @@
 const MegaBotPage = () => {
-  return <div className={"text-white w-full h-full"}>Mega Bot</div>;
+  return <div className={"w-full h-full"}></div>;
 };
 
 export default MegaBotPage;
