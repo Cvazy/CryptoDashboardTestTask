@@ -19,7 +19,7 @@ const MainPage = () => {
           {/*Graph end*/}
         </div>
 
-        <div className={"w-full h-1/2"}>
+        <div className={"flex flex-col gap-5 w-full h-1/2"}>
           <BotsList />
 
           <TimeRange />
