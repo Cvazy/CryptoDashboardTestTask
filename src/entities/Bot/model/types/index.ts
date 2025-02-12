@@ -1,5 +1,6 @@
 export interface IBot {
   name: string;
+  title: string;
   cost: number;
   "24h": number;
   "7d": number;
