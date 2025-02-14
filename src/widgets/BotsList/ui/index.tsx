@@ -6,7 +6,7 @@ import {
 } from "entities/Bot";
 import { useAppSelector } from "app/providers";
 import { ButtonEnum } from "features/TimeRange";
-import { useLocalStorageQuery } from "shared";
+import { MegaBotDecor, useLocalStorageQuery } from "shared";
 
 export const BotsList = () => {
   const { data } = useLocalStorageQuery<IBot[]>(
@@ -19,7 +19,9 @@ export const BotsList = () => {
   const activeBot = useAppSelector((state) => state.activeBot.activeIndex);
 
   return (
-    <div className={"px-4 w-full"}>
+    <div className={"px-4 relative w-full"}>
+      {data?.findIndex((bot) => bot.name === "yellow_bot") && <MegaBotDecor />}
+
       <div
         className={
           "grid grid-cols-3 gap-0.5 w-full sm:grid-cols-4 md:grid-cols-6"

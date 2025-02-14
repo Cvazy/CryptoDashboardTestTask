@@ -1,0 +1,31 @@
+<svg
+        width="400"
+        height="200"
+        viewBox="0 0 400 200"
+        xmlns="http://www.w3.org/2000/svg"
+>
+    <defs>
+        <linearGradient
+                id="gradient"
+                gradientUnits="userSpaceOnUse"
+                x1="0"
+                y1="100"
+                x2="400"
+                y2="100"
+        >
+            <stop offset="0%" stop-color="orange" />
+            <stop offset="100%" stop-color="purple" />
+        </linearGradient>
+    </defs>
+
+    <path
+            d="M10,140
+           C50,80 90,80 130,140
+           S180,200 220,140
+           C260,100 280,100 320,140
+           S370,200 390,140"
+            stroke="url(#gradient)"
+            stroke-width="5"
+            fill="none"
+    />
+</svg>

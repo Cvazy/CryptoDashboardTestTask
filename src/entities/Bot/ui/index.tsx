@@ -30,7 +30,7 @@ export const BotItem = ({
         ${isActive ? "before:content-[''] before:absolute before:inset-0 before:rounded-md before:shadow-[inset_0_0_40px_#21476f]" : ""}
       `}
     >
-      <div className={"p-5 w-full h-full"}>
+      <div className={"p-5 relative w-full h-full"}>
         <div className={"flex items-center justify-center w-full h-full"}>
           <div className={"flex flex-col items-center gap-2 w-full"}>
             {cloneElement(
