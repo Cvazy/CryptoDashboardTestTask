@@ -1,8 +1,12 @@
-import { useFetchAllCurrencyDataQuery } from "../model";
-import { StatElement } from "widgets/TradeStatistic/ui/StatElement";
+import { IData, useFetchAllCurrencyDataQuery } from "../model";
+import { StatElement } from "./StatElement";
+import { useLocalStorageQuery } from "shared/hooks";
 
 export const TradeStatistic = () => {
-  const { data } = useFetchAllCurrencyDataQuery();
+  const { data } = useLocalStorageQuery<IData>(
+    "tradeStatisticData",
+    useFetchAllCurrencyDataQuery,
+  );
 
   return (
     <div className={"px-4 w-full"}>

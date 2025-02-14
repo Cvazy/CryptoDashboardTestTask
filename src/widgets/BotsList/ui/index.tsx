@@ -1,10 +1,20 @@
-import { BotItem, getBotColors, useFetchAllBotsQuery } from "entities/Bot";
+import {
+  BotItem,
+  getBotColors,
+  IBot,
+  useFetchAllBotsQuery,
+} from "entities/Bot";
 import { useState } from "react";
 import { useAppSelector } from "app/providers";
 import { ButtonEnum } from "features/TimeRange";
+import { useLocalStorageQuery } from "shared";
 
 export const BotsList = () => {
-  const { data } = useFetchAllBotsQuery();
+  const { data } = useLocalStorageQuery<IBot[]>(
+    "botListApiData",
+    useFetchAllBotsQuery,
+  );
+
   const activeTimeRange = useAppSelector((state) => state.timeRange.range);
 
   const [isActiveBot, setIsActiveBot] = useState(0);
