@@ -4,7 +4,6 @@ import {
   IBot,
   useFetchAllBotsQuery,
 } from "entities/Bot";
-import { useState } from "react";
 import { useAppSelector } from "app/providers";
 import { ButtonEnum } from "features/TimeRange";
 import { useLocalStorageQuery } from "shared";
@@ -17,7 +16,7 @@ export const BotsList = () => {
 
   const activeTimeRange = useAppSelector((state) => state.timeRange.range);
 
-  const [isActiveBot, setIsActiveBot] = useState(0);
+  const activeBot = useAppSelector((state) => state.activeBot.activeIndex);
 
   return (
     <div className={"px-4 w-full"}>
@@ -29,8 +28,7 @@ export const BotsList = () => {
         {data?.map((bot, index) => (
           <BotItem
             key={bot.name}
-            isActive={isActiveBot === index}
-            setIsActiveBot={setIsActiveBot}
+            isActive={activeBot === index}
             title={bot.title}
             fill={getBotColors(bot.name) || ""}
             index={index}

@@ -1,4 +1,4 @@
-import { BotsList, TradeStatistic } from "widgets";
+import { BotsList, GradientChart, TradeStatistic } from "widgets";
 import { TimeRange } from "features/TimeRange";
 
 const MainPage = () => {
@@ -12,9 +12,7 @@ const MainPage = () => {
         <div className={"flex flex-col gap-5 w-full h-[55%]"}>
           <TradeStatistic />
 
-          {/*Graph start*/}
-          <div></div>
-          {/*Graph end*/}
+          <GradientChart />
         </div>
 
         <div className={"flex flex-col gap-5 w-full h-[45%]"}>

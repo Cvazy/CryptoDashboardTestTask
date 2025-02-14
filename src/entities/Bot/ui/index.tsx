@@ -1,11 +1,12 @@
 import { ReactComponent as BotImage } from "shared/assets/images/bots/bot.svg";
 import { ReactComponent as MegaBotImage } from "shared/assets/images/bots/megaBot.svg";
-import { cloneElement, Dispatch, SetStateAction } from "react";
+import { cloneElement } from "react";
+import { useAppDispatch } from "app/providers";
+import { changeActiveBot } from "entities/Bot/model/services";
 
 interface IBotItemProps {
   index: number;
   isActive: boolean;
-  setIsActiveBot: Dispatch<SetStateAction<number>>;
   fill: string;
   title: string;
   name: string;
@@ -15,15 +16,16 @@ interface IBotItemProps {
 export const BotItem = ({
   index,
   isActive,
-  setIsActiveBot,
   fill,
   title,
   name,
   value,
 }: IBotItemProps) => {
+  const dispatch = useAppDispatch();
+
   return (
     <div
-      onClick={() => setIsActiveBot(index)}
+      onClick={() => dispatch(changeActiveBot(index))}
       className={`relative bg-[#1b283f] aspect-square rounded-md w-full overflow-hidden 
         ${isActive ? "before:content-[''] before:absolute before:inset-0 before:rounded-md before:shadow-[inset_0_0_40px_#21476f]" : ""}
       `}
