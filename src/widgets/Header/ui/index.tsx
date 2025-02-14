@@ -20,7 +20,7 @@ export const Header = () => {
 
   return (
     <header className={"w-full"}>
-      <div className={`${styles.Header} px-5 py-8 w-full`}>
+      <div className={`${styles.Header} px-4 py-8 w-full`}>
         <div
           className={"flex items-center justify-between relative z-50 w-full"}
         >

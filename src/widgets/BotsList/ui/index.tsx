@@ -10,7 +10,7 @@ export const BotsList = () => {
   const [isActiveBot, setIsActiveBot] = useState(0);
 
   return (
-    <div className={"px-5 w-full"}>
+    <div className={"px-4 w-full"}>
       <div
         className={
           "grid grid-cols-3 gap-0.5 w-full sm:grid-cols-4 md:grid-cols-6"

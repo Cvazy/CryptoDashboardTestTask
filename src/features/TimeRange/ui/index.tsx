@@ -11,11 +11,9 @@ export const TimeRange = () => {
   );
 
   return (
-    <div className={"px-5 w-full"}>
+    <div className={"px-4 w-full"}>
       <div
-        className={
-          "flex items-center justify-between flex-nowrap gap-2 w-full max-[411px]:items-start"
-        }
+        className={"flex items-center justify-between flex-nowrap gap-2 w-full"}
       >
         <p
           className={
@@ -25,7 +23,11 @@ export const TimeRange = () => {
           Time Range:
         </p>
 
-        <div className={"flex items-center flex-wrap gap-2 w-full"}>
+        <div
+          className={
+            "flex items-center justify-around flex-nowrap overflow-x-scroll gap-2 w-full"
+          }
+        >
           <Button
             text={"24h"}
             field={"24h"}

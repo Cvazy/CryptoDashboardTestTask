@@ -9,7 +9,7 @@ import { NavItem } from "./components";
 export const NavBar = () => {
   return (
     <div className={"bg-[#19273d] w-full"}>
-      <div className={"px-5 py-2 w-full"}>
+      <div className={"px-4 py-2 w-full"}>
         <div
           className={"flex items-center gap-2 justify-between w-full h-full"}
         >

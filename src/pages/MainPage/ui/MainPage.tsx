@@ -1,4 +1,4 @@
-import { BotsList } from "widgets";
+import { BotsList, TradeStatistic } from "widgets";
 import { TimeRange } from "features/TimeRange";
 
 const MainPage = () => {
@@ -6,20 +6,18 @@ const MainPage = () => {
     <div className={"w-full h-full"}>
       <div
         className={
-          "flex flex-col gap-4 items-center overflow-x-hidden w-full h-full"
+          "flex flex-col gap-4 justify-between items-center overflow-x-hidden w-full h-full"
         }
       >
-        <div className={"w-full h-1/2"}>
-          {/*Trade statistic start*/}
-          <div className={"px-5"}></div>
-          {/*Trade statistic end*/}
+        <div className={"flex flex-col gap-5 w-full h-[55%]"}>
+          <TradeStatistic />
 
           {/*Graph start*/}
           <div></div>
           {/*Graph end*/}
         </div>
 
-        <div className={"flex flex-col gap-5 w-full h-1/2"}>
+        <div className={"flex flex-col gap-5 w-full h-[45%]"}>
           <BotsList />
 
           <TimeRange />
